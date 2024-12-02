@@ -1,4 +1,6 @@
-﻿namespace xadrez_console.tabuleiro
+﻿using tabuleiro;
+
+namespace xadrez_console.tabuleiro
 {
     public abstract class Peca
     {
@@ -15,12 +17,12 @@
             this.tab = tab;
         }
 
-        public void incrementoQteMovimentos()
+        public void incrementarQteMovimentos()
         {
             qteMovimentos++;
         }
         
-        public void decrementoQteMovimentos()
+        public void decrementarQteMovimentos()
         {
             qteMovimentos--;
         }

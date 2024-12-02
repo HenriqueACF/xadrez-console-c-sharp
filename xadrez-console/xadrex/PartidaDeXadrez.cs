@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using tabuleiro;
 using xadrez_console.tabuleiro;
 using xadrez;
 
@@ -29,7 +30,7 @@ namespace xadrez_console.xadrex
         public Peca executaMovimento(Posicao origem, Posicao destino)
         {
             Peca p = tab.retirarPeca(origem);
-            p.incrementoQteMovimentos();
+            p.incrementarQteMovimentos();
             Peca pecaCapturada = tab.retirarPeca(destino);
             tab.colocarPeca(p, destino);
             
@@ -44,7 +45,7 @@ namespace xadrez_console.xadrex
         public void desfazMovimento(Posicao origem, Posicao destino, Peca pecaCapturada)
         {
             Peca p = tab.retirarPeca(destino);
-            p.decrementoQteMovimentos();
+            p.decrementarQteMovimentos();
 
             if (pecaCapturada != null)
             {
@@ -197,12 +198,12 @@ namespace xadrez_console.xadrex
             colocarNovaPeca('e', 1, new Torre(tab, Cor.Branca));
             colocarNovaPeca('d', 1, new Rei(tab, Cor.Branca));
             
-            colocarNovaPeca('c', 7, new Torre(tab, Cor.Branca));
-            colocarNovaPeca('c', 8, new Torre(tab, Cor.Branca));
-            colocarNovaPeca('d', 7, new Torre(tab, Cor.Branca));
-            colocarNovaPeca('e', 7, new Torre(tab, Cor.Branca));
-            colocarNovaPeca('e', 8, new Torre(tab, Cor.Branca));
-            colocarNovaPeca('d', 8, new Rei(tab, Cor.Branca));
+            colocarNovaPeca('c', 7, new Torre(tab, Cor.Preta));
+            colocarNovaPeca('c', 8, new Torre(tab, Cor.Preta));
+            colocarNovaPeca('d', 7, new Torre(tab, Cor.Preta));
+            colocarNovaPeca('e', 7, new Torre(tab, Cor.Preta));
+            colocarNovaPeca('e', 8, new Torre(tab, Cor.Preta));
+            colocarNovaPeca('d', 8, new Rei(tab, Cor.Preta));
         }
         
     }

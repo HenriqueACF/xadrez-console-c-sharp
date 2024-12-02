@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using tabuleiro;
 using xadrez_console.tabuleiro;
 using xadrez_console.xadrex;
 
@@ -90,7 +91,7 @@ namespace xadrez_console
             
             foreach (Peca x in conjunto)
             {
-                Console.Write(x + "");
+                Console.Write(x + " ");
             }
             
             Console.Write("]");
